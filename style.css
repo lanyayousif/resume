@@ -1,0 +1,391 @@
+/* ---=========== google font ===========---- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+/*  ---=========== variable css ===========----  */
+:root {
+    --header-height: 3rem;
+    
+    /*========== Colors ==========*/
+    --title-color: #ffffff;
+    --text-color:  #EDEDED;
+    --text-color-light: #EDEDED;
+
+    --r-title-color: #2F3846;
+    --r-text-color:  #2F3846;
+    --r-bold-title-color: #232323;
+    --r-text-color-light: #676767;
+
+    --container-color: #ededed;
+    --container-color-alt:  #2B3743;
+    --body-color: #fffafa;
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Roboto', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-smoll:400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes ==========*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+
+    /*========== base ==========*/
+*,::before , ::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height);
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color)!important;
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,ul,p{
+    margin: 0;
+}
+
+h1,h2,h3{
+    font-weight: var(--font-medium);
+}
+p{
+font-weight: var(--font-smoll);
+font-family: var(--body-font);
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none!important;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.hr-s{
+    max-width: 400px;
+    margin: var(--mb-3) auto;
+    height: 0.02rem;
+    background-color: white;
+    opacity: 0.9;
+    border: 0px;
+}
+    /*========== class css ==========*/
+ .container-lg{
+  padding: 0px!important;
+   }
+.all-part{
+background-color: var(--body-color);
+margin-top: var(--header-height) !important;
+margin-bottom:var(--header-height) ;
+padding: 0px;
+max-width: 1000px!important;
+
+} 
+.right-side{
+    background-color: var(--container-color);
+    padding: 2rem 1rem;
+}
+.left-side{
+    background-color: var(--container-color-alt);
+    padding: 2rem 1rem;
+
+}
+ /*========== img name title box ==========*/
+.img-box{
+    margin-bottom: var(--mb-3);
+}
+.img-box .name-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+.name-img .img img{
+    border-radius: 50%;
+    object-fit: fill;
+    object-position: center;
+    margin-bottom: var(--mb-2);
+} 
+.name-img .name{
+    font-size: var(--h1-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--title-color);
+    
+}
+.name-img .title{
+    font-size: var(--h3-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+    text-align: center;
+    text-transform: capitalize; 
+    color: var(--title-color);
+}
+.after-img-box{
+    max-width: 400px;
+}
+
+ /*========== cotact info ==========*/
+.box,.education-box,
+.contact-box{
+    margin: var(--mb-1) auto;
+    padding: 0.4rem 1rem;
+}
+.box h1,
+.contact-box h1{
+    font-size: var(--h2-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+    text-align: left;
+    text-transform: uppercase;   
+    margin-bottom: var(--mb-3);
+}
+.left-side .box h1,
+.left-side .contact-box h1{
+    color: var(--title-color);
+    }
+.right-side .box h1,
+.right-side .contact-box h1{
+    color: var(--r-title-color);
+    z-index: 20;
+    padding-right: 15px;
+    position: relative;
+    background-color: var(--container-color);
+    display: inline-block;
+    }
+    .title-dive span{
+        display: inline;
+        padding-right: 5px;
+        padding-bottom: 4px;
+    }
+ .title-div{
+    height: 25px;
+    margin-bottom: var(--mb-3);
+ }
+.right-side .box .title-div::after{
+    display: block;
+    content: " ";
+    height: 2px;
+    width: 100%;
+    background-color: #2F3846;
+    position: relative;
+    z-index: 10;
+    margin-top: -35px;
+}
+
+.box .box-list,
+.contact-box .info-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    align-content: space-between;
+    padding: 0px;
+    margin: 0 auto var(--mb-3) ;
+}
+.box-list .box-itmes,
+.info-list .info-itmes{
+    width: 100%;
+    height: fit-content;
+    padding: 0 0px 0.8rem;
+}
+.box-list .box-itmes,
+.info-list .info-itmes a{
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    word-break: break-all;
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+}
+.left-side .box-list .box-itmes i,
+.left-side .info-list .info-itmes i{
+    color: var(--text-color-light);
+    padding-right: 0.5rem;
+}
+
+.box-list .box-itmes .box-span{
+    font-size: var(--smaller-font-size);
+    display: block;
+    font-weight: var(--font-smoll);
+    font-family: var(--body-font);
+    color: var(--text-color-light);
+}
+
+.lan-itmes .lan-name{
+    line-height: .5;
+}
+
+.lan-itmes .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #081921;
+    display: inline-block;
+}
+.lan-itmes .percent div{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #548ca8;
+}
+.lan-itmes .lan-name{
+    color: var(--text-color);
+    padding: 0rem 0;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+    line-height: 1.3;
+    display: inline-block;
+}
+
+/* ===========right side==================== */
+
+.aboute .describ{
+    font-size: var(--small-font-size);
+    padding-right: 30px;
+    color: var(--r-text-color);
+}
+.right-side .main-box{
+    padding-left: 1.3rem;
+}
+
+.right-side i{
+color: var(--r-title-color);
+font-size: var(--h3-font-size);
+padding-right: 0.5rem;
+
+}
+.right-side .box .r-year,
+.edu-itmes .edu-year{
+    color: var(--r-title-color);
+    padding: 0.3rem 0;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+}
+.right-side .box .sub-title,
+.edu-itmes .edu-part{
+    color: var(--r-text-color-light);
+    padding: 0.3rem 0 0;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+    margin: 0;
+}
+.box .h2-title-box,
+.edu-itmes .edu-uni{
+    color: var(--r-bold-title-color);
+    padding: 0rem 0;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+    line-height: 1.3;
+    display: inline-block;
+}
+
+.right-side .box-itmes .more-info{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding-left: 1.3rem;
+
+}
+.box .box-title-year,
+.box .Exp-title-year{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+
+.right-side .box .aboute-title{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-smoll);
+    font-family: var(--body-font);   
+}
+
+
+.pdf-btn{
+    border: 0px;
+    padding: 10px 20px;
+    margin: 50px 0px 50px 45%;
+    text-align: center;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    border-radius: 5px;
+    background-color: #548ca8;
+}
+
+.pdf-btn:hover{
+    color: #ffffff;
+    background-color: #081921;
+}
+
+
+
+
+/*  Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+   html{
+    font-size: 62.5%;
+   }
+   .right-side .box .title-div::after{
+    margin-top: -24px;
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
